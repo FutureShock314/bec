@@ -1,0 +1,50 @@
+.navbar {
+    --link-spacing: 20px;
+    
+    background-color: black;
+    width: 100dvw;
+    height: 7vh;
+    padding: 10px;
+    padding-inline: 20px;
+    
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    
+    & h1 {
+        justify-self: flex-start;
+    }
+    
+    & > .links {
+        justify-self: flex-end;
+        display: flex;
+        gap: var(--link-spacing);
+        margin-left: auto;
+        /* margin-right: var(--link-spacing); */
+    }
+}
+
+.links > a {
+    padding: 10px;
+    
+    color: white;
+    text-decoration: none;
+    
+    border-radius: 10px;
+    
+    transition: all 250ms linear;
+    
+    font-weight: 300;
+    
+    &:hover {
+        background-color: oklch(0.9 0.1998 280.06);
+        color: black;
+    }
+}
+
+.logo {
+    max-height: 40px;
+    width: auto;
+}
