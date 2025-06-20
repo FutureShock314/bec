@@ -13,7 +13,11 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <>
-      <div className={styles.section} style={{backgroundColor: 'navy'}}>
+      <div className={styles.section} style={{ backgroundColor: 'var(--bg-col)' }}>
+        <h1 className={styles.title}>
+          <span className={styles.hl}>Premium </span>
+          Transport For Your Business and Personal Needs
+        </h1>
       </div>
       
       <div className={styles.section} style={{ backgroundColor: 'black' }} />
