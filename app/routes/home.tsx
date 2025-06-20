@@ -15,9 +15,11 @@ export default function Home() {
     <>
       <div className={styles.section} style={{ backgroundColor: 'var(--bg-col)' }}>
         <h1 className={styles.title}>
-          <span className={styles.hl}>Premium </span>
-          Transport For Your Business and Personal Needs
+          <span className={styles.hl}>Premium</span> Transport For Your<br />
+          Business and Personal Needs
         </h1>
+        
+        <div className={styles.gradientFill} />
       </div>
       
       <div className={styles.section} style={{ backgroundColor: 'black' }} />

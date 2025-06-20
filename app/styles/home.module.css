@@ -21,3 +21,18 @@
     -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
 }
+
+.gradientFill {
+    position: absolute;
+    
+    width: 100dvw;
+    height: 20dvh;
+    
+    background: linear-gradient(
+        to top,
+        black,
+        transparent
+    );
+    
+    bottom: 0px;
+}
