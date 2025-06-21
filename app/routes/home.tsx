@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 
 import styles from "app/styles/home.module.css";
 
@@ -14,10 +14,17 @@ export default function Home() {
   return (
     <>
       <div className={styles.section} style={{ backgroundColor: 'var(--bg-col)' }}>
-        <h1 className={styles.title}>
-          <span className={styles.hl}>Premium</span> Transport For Your<br />
-          Business and Personal Needs
-        </h1>
+        <div className={styles.header}>
+          <h1 className={styles.title}>
+            <span className={styles.hl}>Premium</span> Transport For Your<br />
+            Business and Personal Needs
+          </h1>
+          
+          <h2>
+            Choose Luxury,<br />
+            <NavLink to='/quote' className={styles.linkHL}>Get a Quote</NavLink>
+          </h2>
+        </div>
         
         <div className={styles.gradientFill} />
       </div>
@@ -27,8 +34,8 @@ export default function Home() {
         <p>
           We are a dynamic taxi company with over a decade of experience of delivering nothing but
           high quality transfer service to clients of all walks of life. We serve all airports, stations,
-          and local destinations. All our personnels are exceptionally trained, and our drivers are fully
-          vetted to offer you world-class experience and utmost safety.
+          and local destinations. All our personnel is exceptionally trained, and our drivers are fully
+          vetted to offer you world-class experience at the utmost safety.
         </p>
       </div>
     </>

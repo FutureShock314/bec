@@ -42,7 +42,7 @@
     transition: all 250ms linear;
     
     &:hover {
-        background-color: oklch(0.9 0.1998 280.06);
+        background-color: var(--accent);
         color: black;
     }
 }
