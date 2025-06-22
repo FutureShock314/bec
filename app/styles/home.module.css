@@ -13,7 +13,7 @@
 .header {
     width: 100dvw;
     display: grid;
-    grid-template-columns: 65% 30%;
+    grid-template-columns: auto 30%;
     grid-template-rows: 100%;
     
     & > h2 {
@@ -21,28 +21,67 @@
         justify-self: center;
         text-align: center;
         
+        font-size: 2dvw;
+        
         & > .linkHL {
             text-decoration: none;
+            
+            transition: all 300ms linear;
+            
+            background-image: linear-gradient(
+                45deg,
+                orange 10%,
+                #a00fb0 50%,
+                blue 75%
+            );
+            
+            background-repeat: no-repeat;
+            background-size: 400% 100%;
+            background-position-x: 100%;
+            
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+                    text-fill-color: transparent;
+            
+            &:hover {
+                background-position-x: 25%;
+            }
         }
     }
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 4dvw;
     margin-left: 20px
 }
 
 .hl {
     background-image: linear-gradient(
         75deg,
-        rgb( 10, 10, 255 ),
-        rgb( 100, 100, 255 ) 75%
+        rgb( 10, 10, 255 ) 25%,
+        rgb( 100, 100, 255 ) 50%,
+        rgb( 10, 10, 255 ) 75%
     );
+    
+    background-repeat: repeat-x;
+    background-size: 400% auto;
+    animation: ripple 3s linear infinite;
     
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
             text-fill-color: transparent;
+    
+}
+
+@keyframes ripple {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-x: 100%;
+    }
 }
 
 .gradientFill {

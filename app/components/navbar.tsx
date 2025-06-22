@@ -12,7 +12,7 @@ export default function Navbar() {
         <NavLink to='/about'>About Us</NavLink>
         <NavLink to='/#fleet'>Our Fleet</NavLink>
         <NavLink to='/contact'>Contact Us</NavLink>
-        <NavLink to='/client-portal'>Client Portal</NavLink>
+        <NavLink to='https://www.cdserver1.com/clientportal2/login.aspx?ID=254'>Client Portal</NavLink>
       </div>
     </nav>
   )
