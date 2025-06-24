@@ -1,9 +1,10 @@
 .section {
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100dvw;
     display: flex;
     align-items: center;
     justify-content: start;
+    padding: 30px;
     
     & + .section { /* all but the first element */
         padding-top: 70px;
@@ -15,6 +16,8 @@
     display: grid;
     grid-template-columns: auto 30%;
     grid-template-rows: 100%;
+    
+    /* text-shadow: 0 0 10px #0f0ffa; */
     
     & > h2 {
         align-self: center;
@@ -53,7 +56,7 @@
 
 .title {
     font-size: 4dvw;
-    margin-left: 20px
+    /* margin-left: 20px */
 }
 
 .hl {
@@ -96,10 +99,11 @@
         transparent
     );
     
-    bottom: 0px;
+    bottom: 0;
+    left: 0;
 }
 
-.fleet {
+.services {
     flex-direction: column;
     
     & > h1 {
@@ -112,4 +116,18 @@
         
         font-weight: 300;
     }
+}
+
+.serviceGrid {
+    align-self: center;
+    
+    width: 70%;
+    height: 100%;
+    justify-self: center;
+    margin-top: 50px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
 }

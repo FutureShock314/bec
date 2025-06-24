@@ -1,6 +1,8 @@
 import type { Route } from "./+types/home";
 import { NavLink } from "react-router";
 
+import Service from 'app/components/service.tsx'
+
 import styles from "app/styles/home.module.css";
 
 export function meta({}: Route.MetaArgs) {
@@ -29,14 +31,19 @@ export default function Home() {
         <div className={styles.gradientFill} />
       </div>
       
-      <div className={`${styles.section} ${styles.fleet}`} id='fleet' style={{ backgroundColor: 'black' }}>
-        <h1>Brunel Executive Cars</h1>
+      <div className={`${styles.section} ${styles.services}`} id='services' style={{ backgroundColor: 'black' }}>
+        <h1>Our Services</h1>
         <p>
           We are a dynamic taxi company with over a decade of experience of delivering nothing but
           high quality transfer service to clients of all walks of life. We serve all airports, stations,
           and local destinations. All our personnel is exceptionally trained, and our drivers are fully
           vetted to offer you world-class experience at the utmost safety.
         </p>
+        <div className={styles.serviceGrid}>
+          <Service />
+          <Service />
+          <Service />
+        </div>
       </div>
     </>
   )
