@@ -8,7 +8,7 @@ export default function Navbar() {
       <NavLink to='/'><img className={styles.logo} src='app/img/logo.png' /></NavLink>
       <div className={styles.links}>
         <NavLink to='/quote'>Get a Quote</NavLink>
-        <NavLink to='/services'>Services</NavLink>
+        <NavLink to='/#services'>Services</NavLink>
         <NavLink to='/about'>About Us</NavLink>
         <NavLink to='/#fleet'>Our Fleet</NavLink>
         <NavLink to='/contact'>Contact Us</NavLink>

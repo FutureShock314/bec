@@ -1,7 +1,7 @@
 .navbar {
     --link-spacing: 20px;
     
-    background-color: rgba( 0, 0, 0, 0.2 );
+    background-color: #0a071f20;
     width: 100dvw;
     height: 7vh;
     padding: 10px;
@@ -33,7 +33,7 @@
 .links > a {
     padding: 10px;
     
-    color: white;
+    color: var(--text-light);
     font-weight: 450;
     text-decoration: none;
     
@@ -43,7 +43,7 @@
     
     &:hover {
         background-color: var(--accent);
-        color: black;
+        color: var(--text-dark);
     }
 }
 

@@ -45,7 +45,7 @@
             -webkit-background-clip: text;
                     background-clip: text;
             -webkit-text-fill-color: transparent;
-                    text-fill-color: transparent;
+                    /* text-fill-color: transparent; */
             
             &:hover {
                 background-position-x: 25%;
@@ -74,7 +74,7 @@
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
-            text-fill-color: transparent;
+            /* text-fill-color: transparent; */
     
 }
 
@@ -115,19 +115,21 @@
         text-align: center;
         
         font-weight: 300;
+
+        color: var(--text-med);
     }
 }
 
 .serviceGrid {
     align-self: center;
     
-    width: 70%;
+    width: 90%;
     height: 100%;
     justify-self: center;
     margin-top: 50px;
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 50px;
 }

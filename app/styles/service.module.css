@@ -1,9 +1,9 @@
 .service {
     --border-radius: 20px;
     
-    color: red;
-    background: #1f1f1f;
-    border: #aaa 1px solid;
+    color: var(--text-med);
+    background: var(--bg-med);
+    border: var(--border) 1px solid;
     
     border-radius: var(--border-radius);
     width: auto;
@@ -19,5 +19,16 @@
     
     & > h1, p {
         margin-inline: 10px;
+    }
+
+    & > h1 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+
+    & > p {
+        font-weight: 300;
+        color: var(--text-dark);
+        margin-bottom: 10px;
     }
 }

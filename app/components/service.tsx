@@ -3,7 +3,7 @@ interface Props {
   className?: String;
   imgSrc?: String;
   header?: String;
-  body?: String;
+  // body?: String;
 }
 
 import styles from "app/styles/service.module.css";
@@ -13,7 +13,7 @@ import type { MouseEventHandler } from "react";
 const cardRotation = 15;
 const cardScale = 1.07;
 
-export default function Service({ className, imgSrc, header, body }: Props) {
+export default function Service({ children, className, imgSrc, header, }: Props) {
   const xPcnt = useSpring(0, { bounce: 0 });
   const yPcnt = useSpring(0, { bounce: 0 });
   const scale = useSpring(1, { bounce: 0 });
@@ -84,7 +84,7 @@ export default function Service({ className, imgSrc, header, body }: Props) {
 
       <h1>{header ? header : "Header"}</h1>
 
-      <p>{body ? body : "Body text would go here, but there is none."}</p>
+      <p>{children ? children : "Body text would go here, but there is none."}</p>
     </motion.div>
   );
 }
