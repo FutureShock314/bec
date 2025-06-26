@@ -1,35 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 :root {
-    --bg-dark:  oklch(0.15 0.05 285);
-    --bg-med:   oklch(0.2  0.05 285);
-    --bg-light: oklch(0.25 0.05 285);
+  --bg-dark: oklch(0.15 0.05 285);
+  --bg-med: oklch(0.2 0.05 285);
+  --bg-light: oklch(0.25 0.05 285);
 
-    --text-light: oklch(0.9 0.05 285);
-    --text-med:   oklch(0.8 0.07 285);
-    --text-dark:  oklch(0.7 0.09 285);
+  --text-light: oklch(0.9 0.05 285);
+  --text-med: oklch(0.8 0.07 285);
+  --text-dark: oklch(0.7 0.09 285);
 
-    --accent: oklch(0.9 0.2 280);
-    --border: oklch(0.9 0.1 285);
+  --accent: oklch(0.9 0.2 280);
+  --border: oklch(0.9 0.1 285);
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-                 Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 200;
-    color: var(--text-light);
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 200;
+  color: var(--text-light);
 }
 
-::-moz-selection, ::selection {
-    color: var(--bg-dark);
-    background: var(--accent);
+::-moz-selection,
+::selection {
+  color: var(--bg-dark);
+  background: var(--accent);
 }
