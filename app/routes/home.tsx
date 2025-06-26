@@ -53,16 +53,21 @@ export default function Home() {
           utmost safety.
         </p>
         <div className={styles.serviceGrid}>
-          <Service header="Airport Transfers" imgSrc="">
+          <Service header="Airport Transfers" imgSrc="app/img/airport.png">
             Whether your flight is early or unfortunately running late, you
-            can rest easy knowing your pick up time has been amended accordingly,
-            and you'll never miss your flight.
+            can rest easy knowing your pick up time has been amended accordingly.
           </Service>
           <Service header="Corporate Travel" imgSrc="">
+            We offer a dedicated priority service for corporate clients, ensuring
+            reliable, punctual, and professional transport for all your business needs.
           </Service>
           <Service header="Special Events" imgSrc="">
+            From weddings to sports games, we provide tailored services to ensure you
+            arrive on time and in style, making your special occasions even more memorable.
           </Service>
-          <Service header="Private Hire" imgSrc="">
+          <Service header="Tours" imgSrc="">
+            Explore the city with our guided tours, designed to showcase the best attractions
+            and hidden gems, all while enjoying luxurious transport.
           </Service>
         </div>
       </div>

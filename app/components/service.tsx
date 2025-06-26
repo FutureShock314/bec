@@ -80,11 +80,12 @@ export default function Service({ children, className, imgSrc, header, }: Props)
         style={{
           backgroundImage: `url(${imgSrc ? imgSrc : "app/img/logo.png"})`,
         }}
-      />
+      >
+        <h1 className={styles.svcHeader}>{header ? header : "Header"}</h1>
+        <div className={styles.fill} />
+      </div>
 
-      <h1>{header ? header : "Header"}</h1>
-
-      <p>{children ? children : "Body text would go here, but there is none."}</p>
+      <p className={styles.svcBody}>{children ? children : "Body text would go here, but there is none."}</p>
     </motion.div>
   );
 }
