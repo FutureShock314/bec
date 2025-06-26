@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 
 import Service from "app/components/service";
 
-import styles from "app/styles/home.module.css";
+import styles from "app/styles/routes/home.module.css";
 
 export function meta({}: Route.MetaArgs) {
   return [

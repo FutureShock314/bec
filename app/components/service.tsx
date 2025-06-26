@@ -6,7 +6,7 @@ interface Props {
   // body?: String;
 }
 
-import styles from "app/styles/service.module.css";
+import styles from "app/styles/components/service.module.css";
 import { motion, useSpring, useTransform } from "motion/react";
 import type { MouseEventHandler } from "react";
 

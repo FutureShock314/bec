@@ -1,4 +1,4 @@
-import styles from "app/styles/serviceGrid.module.css";
+import styles from "app/styles/components/serviceGrid.module.css";
 
 export default function ServiceGrid() {
   return (
