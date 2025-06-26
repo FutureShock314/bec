@@ -52,7 +52,7 @@ export default function Home() {
           drivers are fully vetted to offer you world-class experience at the
           utmost safety.
         </p>
-        <div className={styles.serviceGrid}>
+        {/* <div className={styles.serviceGrid}>
           <Service header="Airport Transfers" imgSrc="app/img/airport.png">
             Whether your flight is early or unfortunately running late, you
             can rest easy knowing your pick up time has been amended accordingly.
@@ -69,7 +69,7 @@ export default function Home() {
             Explore the city with our guided tours, designed to showcase the best attractions
             and hidden gems, all while enjoying luxurious transport.
           </Service>
-        </div>
+        </div> */}
       </div>
     </>
   );
