@@ -3,7 +3,6 @@ import { NavLink } from "react-router";
 // import dotenv from 'dotenv';
 // dotenv.config();
 
-// import Service from "app/components/service";
 import ServiceGrid from "app/components/serviceGrid";
 
 import styles from "app/styles/routes/home.module.css";
@@ -55,24 +54,6 @@ export default function Home() {
           drivers are fully vetted to offer you world-class experience at the
           utmost safety.
         </p>
-        {/* <div className={styles.serviceGrid}>
-          <Service header="Airport Transfers" imgSrc="app/img/airport.png">
-            Whether your flight is early or unfortunately running late, you
-            can rest easy knowing your pick up time has been amended accordingly.
-          </Service>
-          <Service header="Corporate Travel" imgSrc="">
-            We offer a dedicated priority service for corporate clients, ensuring
-            reliable, punctual, and professional transport for all your business needs.
-          </Service>
-          <Service header="Special Events" imgSrc="">
-            From weddings to sports games, we provide tailored services to ensure you
-            arrive on time and in style, making your special occasions even more memorable.
-          </Service>
-          <Service header="Tours" imgSrc="">
-            Explore the city with our guided tours, designed to showcase the best attractions
-            and hidden gems, all while enjoying luxurious transport.
-          </Service>
-        </div> */}
         <ServiceGrid />
       </div>
     </>

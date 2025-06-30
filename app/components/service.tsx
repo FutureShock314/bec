@@ -1,91 +1,51 @@
-interface Props {
-  children?: React.ReactNode;
-  className?: String;
-  imgSrc?: String;
-  header?: String;
-  // body?: String;
-}
-
 import styles from "app/styles/components/service.module.css";
-import { motion, useSpring, useTransform } from "motion/react";
-import type { MouseEventHandler } from "react";
+import { motion, useSpring } from "motion/react";
 
-const cardRotation = 15;
 const cardScale = 1.07;
 
-export default function Service({ children, className, imgSrc, header, }: Props) {
-  const xPcnt = useSpring(0, { bounce: 0 });
-  const yPcnt = useSpring(0, { bounce: 0 });
+interface Props {
+  children?: React.ReactNode;
+  className?: string;
+  imgSrc?: string;
+  header?: string;
+}
+
+export default function Service({
+  children,
+  className,
+  imgSrc,
+  header,
+}: Props) {
   const scale = useSpring(1, { bounce: 0 });
 
-  const rotateX = useTransform(
-    yPcnt,
-    [-0.5, 0.5],
-    [`-${cardRotation}deg`, `${cardRotation}deg`]
-  );
-  const rotateY = useTransform(
-    xPcnt,
-    [-0.5, 0.5],
-    [`-${cardRotation}deg`, `${cardRotation}deg`]
-  );
-
-  const getMousePosition = (e: React.MouseEvent<Element, MouseEvent>) => {
-    const { width, height, left, top } =
-      e.currentTarget.getBoundingClientRect();
-
-    const currentMouseX = e.clientX - left;
-    const currentMouseY = e.clientY - top;
-
-    return {
-      currentMouseX,
-      currentMouseY,
-      containerWidth: width,
-      containerHeight: height,
-    };
-  };
-
-  const handleMouseMove: MouseEventHandler = (e) => {
-    const { currentMouseX, currentMouseY, containerWidth, containerHeight } =
-      getMousePosition(e);
-
-    xPcnt.set(currentMouseX / containerWidth - 0.5);
-    yPcnt.set(currentMouseY / containerHeight - 0.5);
-  };
-
-  const handleMouseEnter: MouseEventHandler = (e) => {
+  const handleMouseEnter = () => {
     scale.set(cardScale);
   };
 
-  const handleMouseLeave: MouseEventHandler = (e) => {
+  const handleMouseLeave = () => {
     scale.set(1);
-    xPcnt.set(0);
-    yPcnt.set(0);
   };
 
   return (
     <motion.div
-      onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      style={{ scale }}
       className={`${styles.service} ${className ? className : ""}`}
-      style={{
-        transformStyle: "preserve-3d",
-        rotateX,
-        rotateY,
-        scale,
-      }}
     >
       <div
         className={styles.img}
-        style={{
-          backgroundImage: `url(${imgSrc ? imgSrc : "app/img/logo.png"})`,
-        }}
-      >
-        <h1 className={styles.svcHeader}>{header ? header : "Header"}</h1>
-        <div className={styles.fill} />
+        style={{ backgroundImage: `url(${imgSrc})` }}
+      />
+      <div className={styles.textContainer}>
+        <div className={styles.lineContainer}>
+          <div className={styles.line} />
+        </div>
+        <div className={styles.text}>
+          <h1>{header ? header : "Header"}</h1>
+          <p>{children ? children : "hello!"}</p>
+        </div>
       </div>
-
-      <p className={styles.svcBody}>{children ? children : "Body text would go here, but there is none."}</p>
     </motion.div>
   );
 }

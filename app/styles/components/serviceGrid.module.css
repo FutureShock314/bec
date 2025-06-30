@@ -1,6 +1,18 @@
 .grid {
-  display: grid;
+  width: 90%;
+  height: 70dvh;
 
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  margin-block: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.large {
+  grid-column: span 2;
+  font-size: 1.5rem;
+
+  z-index: 10;
 }
