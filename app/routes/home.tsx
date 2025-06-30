@@ -1,6 +1,5 @@
 import type { Route } from "./+types/home";
 import { NavLink } from "react-router";
-// import nodemailer from 'nodemailer';
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -16,33 +15,6 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  // const transporter = nodemailer.createTransport({
-  //   host: "smtp.ionos.co.uk",
-  //   port: 587,
-  //   secure: false,
-  //   auth: {
-  //     user: process.env.BEC_EMAIL,
-  //     pass: process.env.BEC_PASS,
-  //   },
-  //   tls: {
-  //     rejectUnauthorized: false, // Allow self-signed certificates
-  //     ciphers: "SSLv3", // Use SSLv3 cipher suite
-  //   }
-  // });
-
-  // const email = async () => {
-  //   console.log("start");
-  //   const info = await transporter.sendMail({
-  //     from: `"Brunel Executive Cars" <${process.env.BEC_EMAIL}>`,
-  //     to: process.env.TEST_EMAIL,
-  //     subject: "Hello ✔",
-  //     text: "Hello world?", // plain‑text body
-  //     html: "<b>Hello world?</b>", // HTML body
-  //   });
-
-  //   console.log("Message sent:", info.messageId);
-  // };
-
   return (
     <>
       <div
