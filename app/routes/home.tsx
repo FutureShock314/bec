@@ -4,6 +4,7 @@ import { NavLink } from "react-router";
 // dotenv.config();
 
 // import Service from "app/components/service";
+import ServiceGrid from "app/components/serviceGrid";
 
 import styles from "app/styles/routes/home.module.css";
 
@@ -72,6 +73,7 @@ export default function Home() {
             and hidden gems, all while enjoying luxurious transport.
           </Service>
         </div> */}
+        <ServiceGrid />
       </div>
     </>
   );
