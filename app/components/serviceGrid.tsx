@@ -38,9 +38,7 @@ export default function ServiceGrid() {
       <Service header="Tours" imgSrc="app/img/tours.jpg">
         Explore the city or countryside with our bespoke tour services, offering
         comfortable and luxurious transport for sightseeing, day trips, and
-        excursions, ensuring a memorable experience. Our knowledgeable drivers
-        can also provide local insights and recommendations to enhance your
-        journey.
+        excursions, ensuring a memorable experience.
       </Service>
 
       <Service

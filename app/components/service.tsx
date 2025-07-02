@@ -1,7 +1,7 @@
 import styles from "app/styles/components/service.module.css";
 import { motion, useSpring } from "motion/react";
 
-const cardScale = 1.07;
+const cardScale = 1.04;
 
 interface Props {
   children?: React.ReactNode;
@@ -17,13 +17,16 @@ export default function Service({
   header,
 }: Props) {
   const scale = useSpring(1, { bounce: 0 });
+  const bgScale = useSpring(1, { bounce: 0 });
 
   const handleMouseEnter = () => {
     scale.set(cardScale);
+    bgScale.set(1.2);
   };
 
   const handleMouseLeave = () => {
     scale.set(1);
+    bgScale.set(1);
   };
 
   return (
@@ -33,9 +36,12 @@ export default function Service({
       style={{ scale }}
       className={`${styles.service} ${className ? className : ""}`}
     >
-      <div
+      <motion.div
         className={styles.img}
-        style={{ backgroundImage: `url(${imgSrc})` }}
+        style={{
+          backgroundImage: `url(${imgSrc})`,
+          scale: bgScale,
+        }}
       />
       <div className={styles.textContainer}>
         <div className={styles.lineContainer}>
