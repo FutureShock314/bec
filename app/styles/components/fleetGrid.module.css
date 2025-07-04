@@ -1,0 +1,16 @@
+.grid {
+  width: 90%;
+  height: 105dvh;
+
+  margin-block: 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.sprinter {
+  grid-column: span 2;
+  z-index: 10;
+}

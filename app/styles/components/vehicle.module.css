@@ -1,0 +1,18 @@
+.vehicle {
+  border-radius: 30px;
+
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: var(--bg-dark);
+  border: var(--text-dark) solid 1px;
+
+  position: relative;
+
+  cursor: pointer;
+
+  /* &:hover > .img {
+    opacity: 0.4;
+  } */
+}

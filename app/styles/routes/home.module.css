@@ -99,7 +99,7 @@
   left: 0;
 }
 
-.services {
+.services, .fleet {
   flex-direction: column;
 
   & > h1 {
