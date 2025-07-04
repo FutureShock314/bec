@@ -1,5 +1,6 @@
 import styles from "app/styles/components/service.module.css";
 import { motion, useSpring } from "motion/react";
+import { useNavigate } from "react-router";
 
 const cardScale = 1.04;
 
@@ -19,6 +20,8 @@ export default function Service({
   const scale = useSpring(1, { bounce: 0 });
   const bgScale = useSpring(1, { bounce: 0 });
 
+  const navigate = useNavigate();
+
   const handleMouseEnter = () => {
     scale.set(cardScale);
     bgScale.set(1.2);
@@ -29,29 +32,34 @@ export default function Service({
     bgScale.set(1);
   };
 
+  const handleClick = () => [
+    navigate("/quote")
+  ]
+
   return (
-    <motion.div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={{ scale }}
-      className={`${styles.service} ${className ? className : ""}`}
-    >
       <motion.div
-        className={styles.img}
-        style={{
-          backgroundImage: `url(${imgSrc})`,
-          scale: bgScale,
-        }}
-      />
-      <div className={styles.textContainer}>
-        <div className={styles.lineContainer}>
-          <div className={styles.line} />
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+        style={{ scale }}
+        className={`${styles.service} ${className ? className : ""}`}
+      >
+        <motion.div
+          className={styles.img}
+          style={{
+            backgroundImage: `url(${imgSrc})`,
+            scale: bgScale,
+          }}
+        />
+        <div className={styles.textContainer}>
+          <div className={styles.lineContainer}>
+            <div className={styles.line} />
+          </div>
+          <div className={styles.text}>
+            <h1>{header ? header : "Header"}</h1>
+            <p>{children ? children : "hello!"}</p>
+          </div>
         </div>
-        <div className={styles.text}>
-          <h1>{header ? header : "Header"}</h1>
-          <p>{children ? children : "hello!"}</p>
-        </div>
-      </div>
-    </motion.div>
+      </motion.div>
   );
 }
